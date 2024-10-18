@@ -1,0 +1,581 @@
+body{
+    margin: 10px;
+    overflow-y: hidden;
+}
+.background{
+    opacity: 0.3;
+    height: 95vh; 
+    width: 100vw; 
+}
+
+.nav{
+    padding: 0px;
+    background-color: #FFF200;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+}
+.nav-brand-item{
+    padding-left: 20px;
+}
+.logo{
+    width: 80px;
+    height: 80px;
+}
+
+.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}                
+
+
+
+/* For mobile screens */
+@media (min-width: 481px) and (max-width: 767px){
+        body{
+            margin: 0px;
+            overflow-y: hidden;
+            
+        }
+        *{
+            /*For Login Form*/
+            font-family: 'Poppins', sans-serif;
+        }
+        .background{
+            position: absolute;
+            opacity: 0.3;
+            height: 45vh; 
+            width: 100vw; 
+            mask-image: linear-gradient(black, transparent);
+            -webkit-mask-image: linear-gradient(180deg, black 60%, transparent 100%);
+        }
+
+        .nav{
+            padding: 0px;
+            background-color: #FFF200;
+            box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+        }
+        .nav-brand-item{
+            padding-left: 18px;
+        }
+        .logo{
+            width: 60px;
+            height: 60px;
+        }
+        .container-fluid{
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+        .image-1{
+
+            }
+        
+
+    }
+
+/* For small screens (tablets) */
+@media (min-width: 768px) and (max-width: 991px){
+        body{
+            margin: 0;
+            overflow-y: hidden;
+        }
+        *{
+            /*For Login Form*/
+            font-family: 'Poppins', sans-serif;
+        }
+        .background{
+            position: absolute;
+            opacity: 0.3;
+            height: 93vh; 
+            width: 100vw; 
+            mask-image: linear-gradient(black, transparent);
+            -webkit-mask-image: linear-gradient(180deg, black 60%, transparent 100%);
+        }
+
+        .nav{
+            padding: 0px;
+            background-color: #FFF200;
+            box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+        }
+        .nav-brand-item{
+            padding-left: 20px;
+        }
+        .logo{
+            width: 70px;
+            height: 70px;
+        }
+
+        .container-fluid{
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+
+
+
+        /*Login & Registration Form*/
+        .wrapper{
+            position: relative;
+            margin-top: 150px;
+            width: 370px;
+            height: 410px;
+            background: transparent;
+            box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(30px);
+            overflow: hidden;
+            /*text-align: center;*/
+
+            
+            transition: transform .5s ease, height .2s ease;
+        }
+        .wrapper.active{
+            height: 440px;
+        }
+        
+        .wrapper .form-box{
+            width: 100%;
+            padding: 40px;
+            
+        }
+
+
+
+        /*Login Form transition*/
+        .wrapper .form-box.login{
+            transition: transform .59s ease;
+            transform: translateY(0);
+        }
+        .wrapper.active .form-box.login{
+            transition: none;
+            transform: translateY(-420px);
+        }
+        /*Registration Form transition*/
+        .wrapper .form-box.register{
+            position: absolute;
+            transition: none;
+            transform: translateY(420px);
+        }
+        .wrapper.active .form-box.register{
+            transition: transform .59s ease;
+            transform: translateY(-400px);
+        }
+
+
+
+
+        .form-box h2{
+            font-size: 25px;
+            color: rgba(0,0,0,0.8);
+            text-align: center;
+        }
+        .input-box{
+            position: relative;
+            width: 100%;
+            height: 53px;
+            border-bottom: 2px solid rgba(0, 0, 0, 1);
+            margin: 30px 0;
+        }
+        .input-box label{
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-size: 1em;
+            color: #162938;
+            font-weight: 500;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .input-box input:focus~label, .input-box input:valid~label {
+            top: -3px;
+        }
+        .input-box input {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        }
+        .btn{
+            width: 100%;
+            height: 38px;
+            background: #01579B;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            color: #fff;
+            font-weight: 500;
+        }
+        .btn:hover{
+            background-color: #01579B;
+            color: #fff;
+        }
+        .conditions{
+            font-size: .7em;
+            color: #162938;
+            font-weight: 500;
+            margin: -5px 0 5px;
+            display: flex;
+            padding: 10px;
+        }
+
+
+        .login-register{
+            font-size: .8em;
+            color: #000000;
+            text-align: center;
+            font-weight: 500;
+            margin: 20px 0 5px;
+        }
+        .login-register p a{
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .login-register p a:hover{
+            text-decoration: underline;
+        }
+        .conditions input[type="checkbox"]{
+            margin-right: 10px;
+        }
+    }
+
+/* For medium screens (small laptops) */ 
+@media (min-width: 992px) and (max-width: 1199px){
+        body{
+            margin: 0;
+            overflow-y: hidden;
+        }
+        *{
+            /*For Login Form*/
+            font-family: 'Poppins', sans-serif;
+        }
+        .background{
+            position: absolute;
+            opacity: 0.3;
+            height: 93vh; 
+            width: 100vw; 
+            mask-image: linear-gradient(black, transparent);
+            -webkit-mask-image: linear-gradient(180deg, black 60%, transparent 100%);
+        }
+
+        .nav{
+            padding: -2px;
+            background-color: #FFF200;
+            box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+        }
+        .nav-brand-item{
+            padding-left: 23px;
+        }
+        .logo{
+            width: 80px;
+            height: 80px;
+        }
+
+        .container-fluid{
+            padding-left: 0;
+            padding-right: 0;
+        }             
+
+
+
+        /*Login & Registration Form*/
+        .wrapper{
+            position: relative;
+            margin-top: 150px;
+            width: 385px;
+            height: 433px;
+            background: transparent;
+            box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(30px);
+            overflow: hidden;
+            /*text-align: center;*/
+
+            
+            transition: transform .5s ease, height .2s ease;
+        }
+        .wrapper.active{
+            height: 460px;
+        }
+        
+        .wrapper .form-box{
+            width: 100%;
+            padding: 45px;
+        }
+
+
+
+        /*Login Form transition*/
+        .wrapper .form-box.login{
+            transition: transform .59s ease;
+            transform: translateY(0);
+        }
+        .wrapper.active .form-box.login{
+            transition: none;
+            transform: translateY(-420px);
+        }
+        /*Registration Form transition*/
+        .wrapper .form-box.register{
+            position: absolute;
+            transition: none;
+            transform: translateY(420px);
+        }
+        .wrapper.active .form-box.register{
+            transition: transform .59s ease;
+            transform: translateY(-440px);
+        }
+
+
+
+
+        .form-box h2{
+            font-size: 30px;
+            color: rgba(0,0,0,0.8);
+            text-align: center;
+        }
+        .input-box{
+            position: relative;
+            width: 100%;
+            height: 53px;
+            border-bottom: 2px solid rgba(0, 0, 0, 1);
+            margin: 30px 0;
+        }
+        .input-box label{
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-size: 1em;
+            color: #162938;
+            font-weight: 500;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .input-box input:focus~label, .input-box input:valid~label {
+            top: -5px;
+        }
+        .input-box input {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        }
+        .btn{
+            width: 100%;
+            height: 45px;
+            background: #01579B;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            color: #fff;
+            font-weight: 500;
+        }
+        .btn:hover{
+            background-color: #01579B;
+            color: #fff;
+        }
+        .conditions{
+            font-size: .8em;
+            color: #162938;
+            font-weight: 500;
+            margin: -10px 0 10px;
+            display: flex;
+            padding: 15px;
+        }
+
+
+        .login-register{
+            font-size: .9em;
+            color: #000000;
+            text-align: center;
+            font-weight: 500;
+            margin: 20px 0 5px;
+        }
+        .login-register p a{
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .login-register p a:hover{
+            text-decoration: underline;
+        }
+        .conditions input[type="checkbox"]{
+            margin-right: 10px;
+        }
+    }
+
+
+/* For large screens */
+@media (min-width: 1200px){
+        body{
+            margin: 0;
+            overflow-y: hidden;
+            
+
+
+        }
+        *{
+            /*For Login Form*/
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .background{
+            position: absolute;
+            opacity: 0.3;
+            height: 95vh;
+            width: 100vw; 
+            mask-image: linear-gradient(black, transparent);
+            -webkit-mask-image: linear-gradient(180deg, black 60%, transparent 100%);
+        }
+        .nav{
+            padding: 0px;
+            background-color: #FFF200;
+            box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+        }
+        .nav-brand-item{
+            padding-left: 25px;
+        }
+        .logo{
+            width: 80px;
+            height: 80px;
+        }
+        .container-fluid{
+            padding-left: 0;
+            padding-right: 0;
+        }
+        
+        
+        /*Login & Registration Form*/
+        .wrapper{
+            position: relative;
+            margin-top: 150px;
+            width: 400px;
+            height: 440px;
+            background: transparent;
+            box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(30px);
+            overflow: hidden;
+            /*text-align: center;*/
+
+            
+            transition: transform .5s ease, height .2s ease;
+        }
+        .wrapper.active{
+            height: 465px;
+        }
+        
+        .wrapper .form-box{
+            width: 100%;
+            padding: 50px;
+        }
+
+
+
+        /*Login Form transition*/
+        .wrapper .form-box.login{
+            transition: transform .59s ease;
+            transform: translateY(0);
+        }
+        .wrapper.active .form-box.login{
+            transition: none;
+            transform: translateY(-420px);
+        }
+        /*Registration Form transition*/
+        .wrapper .form-box.register{
+            position: absolute;
+            transition: none;
+            transform: translateY(420px);
+        }
+        .wrapper.active .form-box.register{
+            transition: transform .59s ease;
+            transform: translateY(-450px);
+        }
+
+
+
+
+        .form-box h2{
+            font-size: 2em;
+            color: rgba(0,0,0,0.8);
+            text-align: center;
+        }
+        .input-box{
+            position: relative;
+            width: 100%;
+            height: 50px;
+            border-bottom: 2px solid rgba(0, 0, 0, 1);
+            margin: 30px 0;
+        }
+        .input-box label{
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-size: 1em;
+            color: #162938;
+            font-weight: 500;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .input-box input:focus~label, .input-box input:valid~label {
+            top: -5px;
+        }
+        .input-box input {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        outline: none;
+        }
+        .btn{
+            width: 100%;
+            height: 45px;
+            background: #01579B;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1em;
+            color: #fff;
+            font-weight: 500;
+        }
+        .btn:hover{
+            background-color: #01579B;
+            color: #fff;
+        }
+        .conditions{
+            font-size: .9em;
+            color: #162938;
+            font-weight: 500;
+            margin: -15px 0 15px;
+            display: flex;
+            padding: 20px;
+        }
+
+
+        .login-register{
+            font-size: .9em;
+            color: #000000;
+            text-align: center;
+            font-weight: 500;
+            margin: 25px 0 10px;
+        }
+        .login-register p a{
+            color: #000000;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .login-register p a:hover{
+            text-decoration: underline;
+        }
+        .conditions input[type="checkbox"]{
+            margin-right: 10px;
+        }
+    }
